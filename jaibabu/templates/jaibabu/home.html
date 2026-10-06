@@ -1,0 +1,141 @@
+{% extends 'jaibabu/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+/* BACKGROUND */
+body {
+      background: linear-gradient(rgba(94, 89, 89, 0.6), rgba(66, 66, 66, 0.6)),
+                url("{% static 'images\pexels-photo-268533.jpeg' %}");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    /* background-color: rgba(0, 0, rgb(116, 180, 233), 0.6); */
+    color: white;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+}
+
+/* LEFT TEXT */
+.left-content {
+    width: 50%;
+}
+
+.left-content h1 {
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+}
+
+.left-content span {
+    color: #F54227;
+}
+
+/* BUTTON */
+.join-btn {
+    height: 50px;
+    width: 150px;
+    background-color: #F54227;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* LOGIN BOX */
+.loginbox {
+    background-color: black;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.loginbox h3 {
+    background-color: white;
+    color: #F54227;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.loginbox input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid #444;
+}
+
+
+.loginbox button {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #F54227;
+    border: none;
+}
+
+/* ICONS */
+.icons i {
+    margin: 10px;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.icons i:hover {
+    color: #F54227;
+}
+
+</style>
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-content">
+        <h1> <b>Web Design &</b></h1>
+        <h1><span><b>Development</b></span></h1>
+        <h1><b>Course</b></h1>
+
+        <p><b>Web Design is a specialisation of the design stream.
+            They also use HTML, CSS, WYSIWYG editing software.</b>
+            
+        </p>
+        <a href="{% url 'contact' %}"><button class="join-btn">JOIN US</button></a>
+         
+    </div>
+
+    <!-- LOGIN BOX -->
+    <div class="loginbox">
+        <h3>Login Here</h3>
+
+        <input type="email" placeholder="Enter Email Here">
+        <input type="password" placeholder="Enter Password Here">
+
+        <button>Login</button>
+
+        <p class="mt-3">
+            Don't have an account?<br>
+            <a href="{% url 'signup' %}">Sign Up Here</a>
+        </p>
+
+        <p>Log in with</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-google"></i>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

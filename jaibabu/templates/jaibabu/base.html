@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PraRoz</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: black;
+            padding: 15px 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            color: #F54227 !important;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            margin: auto;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .nav-link:hover {
+            color: #F54227 !important;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            height: 35px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .search-box button {
+            background-color: #F54227;
+            color: white;
+            border: none;
+            height: 35px;
+            margin-left: 5px;
+            padding: 0 15px;
+            border-radius: 5px;
+        }
+
+        .bottom-bar {
+            width: 100%;
+            background-color: black;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+            color: black  !important;
+            margin-top: 12%;
+            height: 60px;
+            /* margin: 0; */
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+    <a class="navbar-brand">PraRoz</a>
+
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarScroll">
+
+      <ul class="navbar-nav mx-auto">
+        <li><a class="nav-link" href="/">HOME</a></li>
+        <li><a class="nav-link" href="/about/">ABOUT</a></li>
+        <li><a class="nav-link" href="/service/">SERVICE</a></li>
+        <li><a class="nav-link" href="/design/">DESIGN</a></li>
+        <li><a class="nav-link" href="/contact/">CONTACT</a></li>
+      </ul>
+
+      <form class="search-box ms-auto">
+        <input type="text" placeholder="Type to Search">
+        <button type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<div class="bottom-bar">ijguvhfgufil</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

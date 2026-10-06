@@ -1,0 +1,140 @@
+{% extends 'jaibabu/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+/* Page background */
+body {
+    background-color: #f5f5f5;
+}
+
+/* Center container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* Card */
+.signup-box {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Heading */
+.signup-box h2 {
+    margin-bottom: 5px;
+}
+
+.signup-box p {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+/* Button */
+.signup-btn {
+    width: 100%;
+    background: #2d6cdf;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background: #1f4fbf;
+}
+
+/* Checkbox */
+.remember {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+/* Social buttons */
+.social-buttons {
+    margin-top: 15px;
+}
+
+.social-buttons button {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 6px 12px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Footer text */
+.bottom-text {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.bottom-text a {
+    color: #2d6cdf;
+    text-decoration: none;
+}
+</style>
+
+<div class="signup-container">
+    <div class="signup-box">
+
+        <h2>Sign up</h2>
+        <p>Sign up to continue</p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="username" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+
+            <button type="submit" class="signup-btn">Sign up</button>
+
+            <div class="remember">
+                <input type="checkbox">
+                <label style="margin-left:5px;">Remember me</label>
+            </div>
+
+            <p style="font-size:12px;">ACCESS QUICKLY</p>
+
+            <div class="social-buttons">
+                <button type="button">Google</button>
+                <button type="button">LinkedIn</button>
+                <button type="button">SSO</button>
+            </div>
+
+            <div class="bottom-text">
+                Already have an account? 
+                <a href="{% url 'home'%}">Sign in</a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

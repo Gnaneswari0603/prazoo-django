@@ -1,0 +1,149 @@
+{% extends 'jaibabu/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+/* HERO SECTION */
+.services-hero {
+    background: url('{% static "images/pexels-photo-268533.jpeg" %}') no-repeat center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    color: white;
+    position: relative;
+}
+
+.services-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.services-hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* SERVICES SECTION */
+.services-section {
+    background: #f2f2f2;
+    padding: 80px 60px;
+}
+
+.services-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    background: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon img {
+    width: 60px;
+}
+
+.service-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.service-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .services-hero {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .services-hero h1 {
+        font-size: 40px;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}
+
+</style>
+
+<!-- HERO -->
+<div class="services-hero">
+    <div class="services-hero-content">
+        <div class="breadcrumb">HOME > SERVICES</div>
+        <h1>Services</h1>
+    </div>
+</div>
+
+<!-- SERVICES CARDS -->
+<div class="services-section">
+
+    <div class="services-container">
+
+        <!-- CARD 1 -->
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="{% static 'images/pexels-photo-268533.jpeg' %}" alt="">
+            </div>
+            <div class="service-content">
+                <a style="color: rgb(59, 56, 56);" href="{% url 'signup' %}"><h3>Salesforce consulting ></h3></a>
+                <p>
+                    We analyze business environment and propose a plan of Salesforce cloud services
+                    implementation based on business data and expertise.
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="service-card">
+            <div class="service-icon">
+                <img src="{% static 'images/pexels-photo-268533.jpeg' %}" alt="">
+            </div>
+            <div class="service-content">
+                
+               <a style="color: rgb(59, 56, 56);" href="{% url 'signup' %}"><h3>Salesforce implementation ></h3></a>
+                <p>
+                    Our expert team collects requirements, develops and sets up Salesforce features
+                    ensuring best performance and efficiency.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
