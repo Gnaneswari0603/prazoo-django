@@ -1,14 +1,8 @@
 # Prazoo – Django Web Application
 
-Prazoo is a web application built using **Python and Django**. The project provides a responsive website with multiple pages for showcasing services, designs, company information, contact details, and user signup functionality.
+Prazoo is a web application developed using **Python and Django**. It includes multiple pages for presenting services, designs, company information, contact details, and user signup functionality.
 
-## 🚀 Live Demo
-
-**Coming Soon**
-
-The application will be deployed online soon.
-
-## ✨ Features
+## Features
 
 * Responsive home page
 * About page
@@ -17,12 +11,12 @@ The application will be deployed online soon.
 * Contact page
 * User signup functionality
 * Django template-based frontend
-* Database integration
-* Static images and assets
+* SQLite database integration
+* Static image and asset management
 * Django admin panel
 * Database migrations
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **Python**
 * **Django**
@@ -32,7 +26,7 @@ The application will be deployed online soon.
 * **SQLite**
 * **Git & GitHub**
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 prazoo-django/
@@ -60,7 +54,7 @@ prazoo-django/
 └── README.md
 ```
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -68,7 +62,7 @@ prazoo-django/
 git clone https://github.com/Gnaneswari0603/prazoo-django.git
 ```
 
-### 2. Navigate to the project
+### 2. Navigate to the project directory
 
 ```bash
 cd prazoo-django
@@ -100,39 +94,29 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 6. Apply migrations
+### 6. Apply database migrations
 
 ```bash
 python manage.py migrate
 ```
 
-### 7. Run the development server
+### 7. Start the development server
 
 ```bash
 python manage.py runserver
 ```
 
-Open the application at:
+Open the application in your browser:
 
 ```text
 http://127.0.0.1:8000/
 ```
 
-## 🗄️ Database
+## Database
 
-The project uses **SQLite** for local development. Database files are excluded from Git using `.gitignore`.
+The application uses **SQLite** for local development. The database file is excluded from version control through `.gitignore`.
 
-## 🔮 Future Improvements
-
-* Deploy the application to a cloud platform
-* Use PostgreSQL for production
-* Improve authentication and user management
-* Add additional form validation
-* Improve responsive design
-* Add automated testing
-* Implement CI/CD
-
-## 👩‍💻 Author
+## Author
 
 **Gnaneswari**
 
